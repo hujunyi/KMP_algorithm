@@ -1,6 +1,8 @@
 #include<iostream>
 #include<vector>
 using namespace std;
+//Get the next[] array for the substring, for instance
+//the next[] for "ababac" is "-1 0 0 1 2 3"
 void prefix_function(string P,vector<int>& next){
   int length = P.size();
   int j=0,k=-1;
@@ -14,6 +16,7 @@ void prefix_function(string P,vector<int>& next){
       k = next[k];
   }
 }
+//find the first the index of the substring P in the string S, return -1 if it doens't find one
 int find_substring(string S,string P,vector<int> next){
   int i=0,j=0;
   while(j<S.size()){
